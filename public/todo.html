@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+        .todo-container {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .todo-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .todo-list li {
+            margin: 5px 0;
+            padding: 8px;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+        }
+        .todo-input {
+            width: 70%;
+            padding: 8px;
+            margin-right: 5px;
+        }
+        .todo-button {
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="todo-container">
+        <h1>To-Do List Manager</h1>
+        <input type="text" id="todo-input" class="todo-input" placeholder="Enter a new task">
+        <button onclick="addTodo()" class="todo-button">Add</button>
+        <ul id="todo-list" class="todo-list"></ul>
+    </div>
+
+    <script>
+        // Function to add an item to the To-Do list
+        function addTodo() {
+            const input = document.getElementById('todo-input');
+            const item = input.value.trim();
+            if (item) {
+                const list = document.getElementById('todo-list');
+                 
+                listItem.onclick = function() { removeTodoItem(listItem); };
+                list.appendChild(listItem);
+                input.value = '';
+            } else {
+                alert('Please enter a valid task.');
+            }
+        }
+
+        // Function to remove an item from the To-Do list
+        function removeTodoItem(listItem) {
+            listItem.remove();
+        }
+    </script>
+</body>
+</html>

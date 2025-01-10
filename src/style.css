@@ -646,6 +646,10 @@ video {
   border-radius: 5px;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .bg-slate-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(203 213 225 / var(--tw-bg-opacity, 1));

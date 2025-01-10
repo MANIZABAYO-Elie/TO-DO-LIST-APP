@@ -14,10 +14,11 @@
                 <input type="text" id="input-box" placeholder="Add your text" >
                 <button class="bg-purple-500 rounded-[5px]" id="add-button">Add</button>
                 <ul id="list-container" class="text-[20px] mt-[30px] p-[5px]">
-                    <li> Morning workout</li>
+                    <!-- <li> Morning workout</li>
                     <li> bathing </li>
-                    <li> programming</li>
+                    <li> programming</li> -->
                 </ul>
+                <p id="display"></p>
             </div>
         </div>
 
@@ -26,7 +27,18 @@
     const inputBox =document.getElementById('input-box');
     const listContainer = document.getElementById('list');
     const addButton = document.getElementById('add-button');
-    
+    const display = document.getElementById('display')
+    const item =inputBox.value.trim() 
+    addButton.addEventListener('click',function(){
+        if(item===""){
+            display.textContent = "Please enter the value";
+  
+        }else{
+            const listItem = document.createElement('li');
+            listItem.textContent= item
+            
+        }
+    })
     
 </script>
 </body>
