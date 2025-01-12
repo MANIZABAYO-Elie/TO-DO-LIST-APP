@@ -24,39 +24,22 @@
 
     </div>
 <script>
-    // const inputBox =document.getElementById('input-box');
-    // const listContainer = document.getElementById('list');
-    // const addButton = document.getElementById('add-button');
-    // const display = document.getElementById('display')
-    // const item =inputBox.value.trim() 
-    // addButton.addEventListener('click',function(){
-    //     if(item===""){
-    //         display.textContent = "Please enter the value";
+    const inputBox =document.getElementById('input-box');
+    const listContainer = document.getElementById('list');
+    const addButton = document.getElementById('add-button');
+    const display = document.getElementById('display')
+    const item =inputBox.value.trim() 
+    addButton.addEventListener('click',function(){
+        if(item===""){
+            display.textContent = "Please enter the value";
   
-    //     }else{
-    //         const listItem = document.createElement('li');
-    //         listItem.textContent= item
+        }else{
+            const listItem = document.createElement('li');
+            listItem.textContent= item
             
-    //     }
-    // })
-    function addTodo() {
-            const input = document.getElementById('input-box');
-            const item = input.value.trim();
-            if (item) {
-                const list = document.getElementById('todo-list');
-                 
-                listItem.onclick = function() { removeTodoItem(listItem); };
-                list.appendChild(listItem);
-                input.value = '';
-            } else {
-                alert('Please enter a valid task.');
-            }
         }
-
-        // Function to remove an item from the To-Do list
-        function removeTodoItem(listItem) {
-            listItem.remove();
-        }
+    })
+   
 </script>
 </body>
 </html>
